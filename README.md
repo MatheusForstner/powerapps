@@ -5,7 +5,7 @@
 # Usuário e senha 
 
 <div align="center">
-<a href="https://ibb.co/zfwbL34"><img src="https://i.ibb.co/zfwbL34/Veteriano10.png" alt="Veteriano10" border="0"></a>
+<img src="https://i.ibb.co/7yFVT31/Veteriano10.png" alt="Veteriano10" width="1161" height="651" data-is360="0" data-load="full" class="cursor-zoom-out" style="width: 950px; height: 532.687px; cursor: zoom-in; display: block;" data-zoom="zoom-class0">
 </div>
 
 # Home 
