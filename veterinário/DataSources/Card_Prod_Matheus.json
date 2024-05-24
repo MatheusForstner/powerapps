@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crba2_card_prod_matheuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crba2_card_prod_matheus",
+    "MaxGetRowsCount": 500,
+    "Name": "Card_Prod_Matheus",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "crba2_card_prod_matheus_AsyncOperations": "Trabalhos do Sistema",
+      "crba2_card_prod_matheus_BulkDeleteFailures": "Falhas da Exclusão em Massa",
+      "crba2_card_prod_matheus_DuplicateBaseRecord": "Registros Duplicados (crba2_card_prod_matheus_DuplicateBaseRecord)",
+      "crba2_card_prod_matheus_DuplicateMatchingRecord": "Registros Duplicados (crba2_card_prod_matheus_DuplicateMatchingRecord)",
+      "crba2_card_prod_matheus_MailboxTrackingFolders": "Pastas de Acompanhamento Automático da Caixa de Correio",
+      "crba2_card_prod_matheus_PrincipalObjectAttributeAccesses": "Compartilhamento de Campo",
+      "crba2_card_prod_matheus_ProcessSession": "Sessões de Processo",
+      "crba2_card_prod_matheus_SyncErrors": "Erros de Sincronização",
+      "crba2_card_prod_matheusid": "Card_Prod_Matheus",
+      "crba2_categoria": "Categoria",
+      "crba2_id": "ID",
+      "crba2_nome": "Nome",
+      "crba2_preco": "Preco",
+      "crba2_saldo": "Saldo",
+      "createdby": "Criada Por",
+      "createdon": "Data de Criação",
+      "createdonbehalfby": "Criado por (Delegado)",
+      "importsequencenumber": "Número de Sequência de Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Data de Modificação",
+      "modifiedonbehalfby": "Modificado por (Delegado)",
+      "overriddencreatedon": "Registro Criado em",
+      "owningbusinessunit": "Unidade de Negócios Proprietária",
+      "owningteam": "Equipe Proprietária",
+      "owninguser": "Usuário Proprietário",
+      "statecode": "Status",
+      "statuscode": "Razão do Status",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão de UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Card_Prod_Matheus",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Card_Prod_Matheus (Modos de exibição)",
+    "Name": "_crba2_card_prod_matheus_views",
+    "RelatedEntityName": "Card_Prod_Matheus",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1ca0a9c7-d1c3-4206-8ac2-34e1e4f7aa3d": "Card_Prod_Matheus Ativos(as)",
+      "43b61a13-ce3b-488f-b65a-705d1b3032cc": "Exibição de Consulta de Card_Prod_Matheus",
+      "66fa6b04-e996-4c21-b628-2721d399dd5d": "Card_Prod_Matheus Inativos(as)",
+      "6c95db09-62e5-4e62-8eef-d91caeaa6e47": "Exibição de Localização Avançada de Card_Prod_Matheus",
+      "dcefc114-d2bd-4430-98a2-19daf56d8a39": "Exibição Associada de Card_Prod_Matheus"
+    }
+  },
+  {
+    "DisplayName": "Status (Card_Prod_Matheus)",
+    "Name": "crba2_card_prod_matheus_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo(a)",
+      "1": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Card_Prod_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Card_Prod_Matheus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Status (Card_Prod_Matheus)",
+    "Name": "crba2_card_prod_matheus_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo(a)",
+      "2": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Card_Prod_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Card_Prod_Matheus",
+    "Type": "OptionSetInfo"
+  }
+]

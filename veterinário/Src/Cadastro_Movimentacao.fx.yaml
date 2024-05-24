@@ -1,0 +1,1023 @@
+Cadastro_Movimentacao As screen:
+    BackgroundImage: =
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    FM_Cadastro_Movimento As form:
+        DataSource: =Cadastro_Movimentacao_Matheus
+        Fill: =RGBA(54, 176, 75, 0.24)
+        Height: =467
+        Item: =GL_Lista_Movimento.Selected
+        NumberOfColumns: =2
+        Width: =1146
+        X: =117
+        Y: =121
+        ZIndex: =4
+
+        ID_movimentacao_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crba2_id_movimentacao"
+            Default: =ThisItem.ID_movimentacao
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Cadastro_Movimentacao_Matheus],DataSourceInfo.DisplayName,crba2_id_movimentacao)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Cadastro_Movimentacao_Matheus], DataSourceInfo.MaxLength, crba2_id_movimentacao)
+            Required: =true
+            Update: =DataCardValue6.Text
+            Width: =517
+            X: =0
+            Y: =0
+            ZIndex: =27
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                Height: =34
+                Size: =16
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =32
+                ZIndex: =1
+
+            DataCardValue6 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: |-
+                    =If(
+                         FM_Cadastro_Movimento.Mode = FormMode.New,
+                         
+                          Max(Cadastro_Movimentacao_Matheus,ID_movimentacao)+1,
+                          
+                          Parent.Default)
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode.Disabled
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                ZIndex: =2
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =DataCardKey6.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+        "'Entrada/Saida_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crba2_entradasaida"
+            Default: =ThisItem.'Entrada/Saida'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Cadastro_Movimentacao_Matheus],DataSourceInfo.DisplayName,crba2_entradasaida)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue7.Selected.Value
+            Width: =517
+            X: =1
+            Y: =0
+            ZIndex: =27
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                Height: =34
+                Size: =16
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =32
+                ZIndex: =1
+
+            DataCardValue7 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(0, 0, 0, 1)
+                DefaultSelectedItems: =[Parent.Default]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                IsSearchable: =false
+                Items: =Choices('Entrada/Saida (Cadastro_Movimentacao_Matheus)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(0, 0, 0, 1)
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =DataCardKey7.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+        ID_Produto_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crba2_id_produto"
+            Default: =ThisItem.ID_Produto
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Cadastro_Movimentacao_Matheus],DataSourceInfo.DisplayName,crba2_id_produto)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Cadastro_Movimentacao_Matheus], DataSourceInfo.MaxLength, crba2_id_produto)
+            Required: =false
+            Update: =DCV_Produto.Text
+            Width: =517
+            X: =0
+            Y: =1
+            ZIndex: =27
+
+            DataCardKey8 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                Height: =34
+                Size: =16
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DCV_Produto As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =varProdutoId
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode.Disabled
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DCV_Produto.Y + DCV_Produto.Height
+                ZIndex: =3
+
+            StarVisible8 As label:
+                Align: =Align.Center
+                Height: =DataCardKey8.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey8.Y
+                ZIndex: =4
+
+        Quantidade_DataCard1 As typedDataCard.numberEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crba2_quantidade"
+            Default: =ThisItem.Quantidade
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Cadastro_Movimentacao_Matheus],DataSourceInfo.DisplayName,crba2_quantidade)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue9.Text)
+            Width: =517
+            X: =1
+            Y: =1
+            ZIndex: =27
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                Height: =34
+                Size: =16
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                ZIndex: =2
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        destino_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crba2_destino"
+            Default: =ThisItem.destino
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Cadastro_Movimentacao_Matheus],DataSourceInfo.DisplayName,crba2_destino)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Cadastro_Movimentacao_Matheus], DataSourceInfo.MaxLength, crba2_destino)
+            Required: =false
+            Update: =DataCardValue10.Text
+            Width: =517
+            X: =0
+            Y: =2
+            ZIndex: =27
+
+            DataCardKey10 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                Height: =34
+                Size: =16
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                ZIndex: =2
+
+            ErrorMessage10 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue10.Y + DataCardValue10.Height
+                ZIndex: =3
+
+            StarVisible10 As label:
+                Align: =Align.Center
+                Height: =DataCardKey10.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey10.Y
+                ZIndex: =4
+
+    ComboProduto As dropdown:
+        ChevronBackground: =RGBA(0, 0, 0, 1)
+        Height: =44
+        Items: =Distinct(Card_Prod_Matheus,Nome)
+        OnChange: |-
+            =UpdateContext({varProdutoId: LookUp(Card_Prod_Matheus, Nome = ComboProduto.Selected.Value, ID)});
+            NewForm(FM_Cadastro_Movimento)
+        SelectionFill: =RGBA(0, 0, 0, 1)
+        Width: =454
+        X: =670
+        Y: =391
+        ZIndex: =9
+
+    Sucesso_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Rectangle8_1 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            BorderThickness: =8
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =768
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Visible: =VarMostraPopup
+            Width: =1366
+            ZIndex: =5
+
+        Label10_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(152, 208, 70, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =90
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Size: =30
+            Text: ="Deu tudo certo!"
+            Visible: =VarMostraPopup
+            Width: =328
+            X: =510
+            Y: =461
+            ZIndex: =6
+
+        Image2_1 As image:
+            Height: =372
+            Image: =sucesso
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Visible: =VarMostraPopup
+            Width: =522
+            X: =434
+            Y: =118
+            ZIndex: =8
+
+    Sucesso_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        Rectangle8_2 As rectangle:
+            BorderColor: =RGBA(152, 208, 70, 1)
+            BorderThickness: =8
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =768
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Visible: =VarMostraPopup
+            Width: =1366
+            ZIndex: =30
+
+        Label10_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(152, 208, 70, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =90
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Size: =30
+            Text: ="Deu tudo certo!"
+            Visible: =VarMostraPopup
+            Width: =328
+            X: =510
+            Y: =461
+            ZIndex: =31
+
+        Image2_2 As image:
+            Height: =372
+            Image: =sucesso
+            OnSelect: |-
+                =Set(VarMostraPopup,false);
+                Navigate(Cadastro_Movimentacao);
+                ResetForm(FM_Cadastro_Movimento)
+            Visible: =VarMostraPopup
+            Width: =522
+            X: =434
+            Y: =118
+            ZIndex: =32
+
+    Modal2 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =33
+
+        Rectangle11 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =768
+            Visible: =varShowPopus
+            Width: =1366
+            ZIndex: =24
+
+        "GL_Lista_Movimento As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+            DelayItemLoading: =true
+            Fill: =RGBA(54, 176, 75, 0.29)
+            Height: =513
+            Items: =Cadastro_Movimentacao_Matheus
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =116
+            Visible: =varShowPopus
+            Width: =1260
+            X: =60
+            Y: =129
+            ZIndex: =25
+
+            Rectangle9_1 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =84
+                OnSelect: =Select(Parent)
+                Width: =246
+                X: =533
+                Y: =15
+                ZIndex: =1
+
+            Rectangle9 As rectangle:
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =Parent.TemplateHeight - Separator3.Height
+                OnSelect: =Select(Parent)
+                Width: =70
+                ZIndex: =2
+
+            Title3 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =42
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =ThisItem.ID_movimentacao
+                VerticalAlign: =VerticalAlign.Top
+                Width: =40
+                X: =30
+                Y: =33
+                ZIndex: =3
+
+            Subtitle3 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =46
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =LookUp(Card_Prod_Matheus, ID = ThisItem.ID_Produto, Nome)
+                VerticalAlign: =VerticalAlign.Top
+                Width: =200
+                X: =612
+                Y: =49
+                ZIndex: =4
+
+            Body2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: =ThisItem.Quantidade
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Title3.Width
+                X: =242
+                Y: =25
+                ZIndex: =5
+
+            NextArrow3 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                Height: =50
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                Tooltip: ="Exibir detalhes do item"
+                Width: =50
+                X: =1168
+                Y: =33
+                ZIndex: =6
+
+            Separator3 As rectangle:
+                Fill: =RGBA(0, 0, 0, 1)
+                Height: =8
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - Self.Height
+                ZIndex: =7
+
+            NextArrow3_1 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                Height: =50
+                Icon: =Icon.Edit
+                OnSelect: |-
+                    =Navigate(Cadastro_Movimentacao);
+                    Set(varShowPopus, false);
+                    EditForm(FM_Cadastro_Movimento)
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                Tooltip: ="Exibir detalhes do item"
+                Width: =50
+                X: =1118
+                Y: =33
+                ZIndex: =8
+
+            NextArrow3_2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                Height: =50
+                Icon: =Icon.Trash
+                OnSelect: |-
+                    =Remove(Cadastro_Movimentacao_Matheus,
+                    GL_Lista_Movimento.Selected)
+                PaddingBottom: =16
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                Tooltip: ="Exibir detalhes do item"
+                Width: =50
+                X: =1068
+                Y: =33
+                ZIndex: =9
+
+            Body2_1 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =20
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: =ThisItem.'Entrada/Saida'
+                VerticalAlign: =VerticalAlign.Top
+                Width: =61
+                X: =257
+                Y: =44
+                ZIndex: =10
+
+            Body2_2 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =33
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: =ThisItem.destino
+                VerticalAlign: =VerticalAlign.Top
+                Width: =61
+                X: =201
+                Y: =75
+                ZIndex: =11
+
+            Body2_3 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =23
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: |-
+                    ="Quantidade:"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =127
+                X: =106
+                Y: =24
+                ZIndex: =12
+
+            Body2_4 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =21
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: |-
+                    ="Entrada/Saida:"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =151
+                X: =106
+                Y: =47
+                ZIndex: =13
+
+            Body2_5 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Font: =Font.Arial
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =33
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: |-
+                    ="Destino:"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =95
+                X: =106
+                Y: =75
+                ZIndex: =14
+
+            Subtitle3_1 As label:
+                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                Height: =34
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =16
+                Text: ="ID_Produto"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =164
+                X: =590
+                Y: =19
+                ZIndex: =15
+
+        Button5_1 As button:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =54
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            OnSelect: =Set(varShowPopus, false)
+            Text: ="Cadastro Movimentação"
+            Visible: =varShowPopus
+            Width: =263
+            X: =1057
+            Y: =669
+            ZIndex: =26
+
+        Image1_5 As image:
+            Height: =40
+            Image: ='movimentacao-de-carga'
+            Visible: =varShowPopus
+            Width: =40
+            X: =122
+            Y: =50
+            ZIndex: =27
+
+        Label6_4 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Size: =21
+            Text: ="Lista Movimentação"
+            Visible: =varShowPopus
+            Width: =536
+            X: =178
+            Y: =40
+            ZIndex: =28
+
+        Icon2_4 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =24
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(Home)
+            Visible: =varShowPopus
+            Width: =30
+            X: =72
+            Y: =60
+            ZIndex: =29
+
+    Group12 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =33
+
+        Image1_3 As image:
+            Height: =40
+            Image: ='movimentacao-de-carga'
+            Width: =40
+            X: =167
+            Y: =50
+            ZIndex: =1
+
+        Label6_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Size: =21
+            Text: ="Cadastra Movimentação"
+            Width: =536
+            X: =223
+            Y: =40
+            ZIndex: =2
+
+        Icon2_3 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =24
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(Home)
+            Width: =30
+            X: =117
+            Y: =60
+            ZIndex: =3
+
+    Group11 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =33
+
+        Button5 As button:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =48
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 100), -20%)
+            OnSelect: =Set(varShowPopus, true)
+            Text: ="Listas"
+            Width: =212
+            X: =925
+            Y: =527
+            ZIndex: =7
+
+        Button7_2 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Fill: =RGBA(54, 176, 75, 1)
+            Font: =Font.Arial
+            Height: =48
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            OnSelect: |-
+                =SubmitForm(FM_Cadastro_Movimento);
+                Set(VarMostraPopup, true);
+                If(
+                    FM_Cadastro_Movimento.LastSubmit.'Entrada/Saida' = 1,
+                    UpdateIf(Card_Prod_Matheus, ID = varProdutoId, {Saldo: Saldo + FM_Cadastro_Movimento.LastSubmit.Quantidade}),
+                    UpdateIf(Card_Prod_Matheus, ID = varProdutoId, {Saldo: Saldo - FM_Cadastro_Movimento.LastSubmit.Quantidade})
+                )
+            Text: ="Salvar"
+            Width: =212
+            X: =925
+            Y: =465
+            ZIndex: =22
+
+        Button7_3 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            Height: =48
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            OnSelect: =NewForm(FM_Cadastro_Movimento)
+            Text: ="Adicionar"
+            Width: =212
+            X: =670
+            Y: =465
+            ZIndex: =23
+
+    Menu_2 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =37
+
+        Rectangle1_2 As rectangle:
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =86
+            Width: =1366
+            Y: =682
+            ZIndex: =10
+
+        Button1_9 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =41
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Home)
+            PaddingLeft: =20
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Home"
+            Width: =174
+            X: =20
+            Y: =708
+            ZIndex: =11
+
+        Button1_10 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Produto)
+            PaddingLeft: =50
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(152, 208, 70, 100)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =21
+            Text: ="Cadastra Prd"
+            Width: =262
+            X: =207
+            Y: =706
+            ZIndex: =12
+
+        Button1_11 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Movimentacao)
+            PaddingLeft: =50
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Cadastra Mov"
+            Width: =262
+            X: =491
+            Y: =706
+            ZIndex: =13
+
+        Button1_12 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Relatorio)
+            PaddingLeft: =40
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Relatório"
+            Width: =208
+            X: =780
+            Y: =706
+            ZIndex: =14
+
+        Image1_25 As image:
+            Height: =40
+            Image: =produtos
+            Width: =40
+            X: =217
+            Y: =706
+            ZIndex: =15
+
+        Image1_26 As image:
+            Height: =40
+            Image: ='movimentacao-de-carga'
+            Width: =40
+            X: =494
+            Y: =709
+            ZIndex: =16
+
+        Image1_13 As image:
+            Height: =40
+            Image: =relatorio
+            Width: =40
+            X: =780
+            Y: =709
+            ZIndex: =17
+
+        Button1_23 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =42
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Login)
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Sair"
+            Width: =145
+            X: =1217
+            Y: =709
+            ZIndex: =18
+
+        Label7_2 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Size: =21
+            Text: ="@usuário"
+            X: =1071
+            Y: =706
+            ZIndex: =19
+
+        Image1_12 As image:
+            Height: =40
+            Image: ='equipe-medica'
+            Width: =40
+            X: =20
+            Y: =706
+            ZIndex: =20
+
+        Image1_14 As image:
+            Height: =40
+            Image: =profile
+            Width: =40
+            X: =1020
+            Y: =709
+            ZIndex: =21
+

@@ -1,0 +1,25 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_crba2_pf_matheus_forms",
+      "Namespace": "Login_Matheus (Formulários)",
+      "Values": {
+        "Informações": "ac925a33-8c8b-4f73-b7bb-f9370818b7bd"
+      }
+    },
+    {
+      "Kind": "default.cds_crba2_card_prod_matheus_forms",
+      "Namespace": "Card_Prod_Matheus (Formulários)",
+      "Values": {
+        "Informações": "0884cbe7-3ad3-4bbc-a28b-edc018a85980"
+      }
+    },
+    {
+      "Kind": "default.cds_crba2_cadastro_movimentacao_matheus_forms",
+      "Namespace": "Cadastro_Movimentacao_Matheus (Formulários)",
+      "Values": {
+        "Informações": "56c18f5e-44df-432e-8ade-58d6dfdb84b4"
+      }
+    }
+  ]
+}

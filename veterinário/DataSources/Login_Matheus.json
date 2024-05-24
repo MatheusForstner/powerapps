@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crba2_pf_matheuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crba2_pf_matheus",
+    "Name": "Login_Matheus",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "crba2_login": "Login",
+      "crba2_pf_matheus_AsyncOperations": "Trabalhos do Sistema",
+      "crba2_pf_matheus_BulkDeleteFailures": "Falhas da Exclusão em Massa",
+      "crba2_pf_matheus_DuplicateBaseRecord": "Registros Duplicados (crba2_pf_matheus_DuplicateBaseRecord)",
+      "crba2_pf_matheus_DuplicateMatchingRecord": "Registros Duplicados (crba2_pf_matheus_DuplicateMatchingRecord)",
+      "crba2_pf_matheus_MailboxTrackingFolders": "Pastas de Acompanhamento Automático da Caixa de Correio",
+      "crba2_pf_matheus_PrincipalObjectAttributeAccesses": "Compartilhamento de Campo",
+      "crba2_pf_matheus_ProcessSession": "Sessões de Processo",
+      "crba2_pf_matheus_SyncErrors": "Erros de Sincronização",
+      "crba2_pf_matheusid": "PF_Matheus",
+      "crba2_senha": "Senha",
+      "createdby": "Criada Por",
+      "createdon": "Data de Criação",
+      "createdonbehalfby": "Criado por (Delegado)",
+      "importsequencenumber": "Número de Sequência de Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Data de Modificação",
+      "modifiedonbehalfby": "Modificado por (Delegado)",
+      "overriddencreatedon": "Registro Criado em",
+      "owningbusinessunit": "Unidade de Negócios Proprietária",
+      "owningteam": "Equipe Proprietária",
+      "owninguser": "Usuário Proprietário",
+      "statecode": "Status",
+      "statuscode": "Razão do Status",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão de UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Login_Matheus",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Login_Matheus (Modos de exibição)",
+    "Name": "_crba2_pf_matheus_views",
+    "RelatedEntityName": "Login_Matheus",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "19d7dd06-e110-4f53-bc79-5cea9827e7e9": "Exibição de Localização Avançada de PF_Matheus",
+      "28f80168-5061-4958-829b-a44ea46ce747": "PF_Matheus Inativos(as)",
+      "878f1cb9-0d0b-46c3-a093-e70ae6939760": "PF_Matheus Ativos(as)",
+      "a69a7504-bbba-4cf8-bd50-dd696259522f": "Exibição Associada de PF_Matheus",
+      "c8aa0e0e-f051-4a43-92d4-819248429a60": "Exibição de Consulta de PF_Matheus"
+    }
+  },
+  {
+    "DisplayName": "Status (Login_Matheus)",
+    "Name": "crba2_pf_matheus_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo(a)",
+      "1": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Login_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Login_Matheus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Status (Login_Matheus)",
+    "Name": "crba2_pf_matheus_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo(a)",
+      "2": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Login_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Login_Matheus",
+    "Type": "OptionSetInfo"
+  }
+]

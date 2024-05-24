@@ -1,0 +1,119 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "crba2_cadastro_movimentacao_matheuses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "crba2_cadastro_movimentacao_matheus",
+    "MaxGetRowsCount": 500,
+    "Name": "Cadastro_Movimentacao_Matheus",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "crba2_cadastro_movimentacao_matheus_AsyncOperations": "Trabalhos do Sistema",
+      "crba2_cadastro_movimentacao_matheus_BulkDeleteFailures": "Falhas da Exclusão em Massa",
+      "crba2_cadastro_movimentacao_matheus_MailboxTrackingFolders": "Pastas de Acompanhamento Automático da Caixa de Correio",
+      "crba2_cadastro_movimentacao_matheus_PrincipalObjectAttributeAccesses": "Compartilhamento de Campo",
+      "crba2_cadastro_movimentacao_matheus_ProcessSession": "Sessões de Processo",
+      "crba2_cadastro_movimentacao_matheus_SyncErrors": "Erros de Sincronização",
+      "crba2_cadastro_movimentacao_matheusid": "Cadastro_Movimentacao_Matheus",
+      "crba2_destino": "destino",
+      "crba2_entradasaida": "Entrada/Saida",
+      "crba2_id_movimentacao": "ID_movimentacao",
+      "crba2_id_produto": "ID_Produto",
+      "crba2_quantidade": "Quantidade",
+      "createdby": "Criada Por",
+      "createdon": "Data de Criação",
+      "createdonbehalfby": "Criado por (Delegado)",
+      "importsequencenumber": "Número de Sequência de Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Data de Modificação",
+      "modifiedonbehalfby": "Modificado por (Delegado)",
+      "overriddencreatedon": "Registro Criado em",
+      "owningbusinessunit": "Unidade de Negócios Proprietária",
+      "owningteam": "Equipe Proprietária",
+      "owninguser": "Usuário Proprietário",
+      "statecode": "Status",
+      "statuscode": "Razão do Status",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão de UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Cadastro_Movimentacao_Matheus",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Cadastro_Movimentacao_Matheus (Modos de exibição)",
+    "Name": "_crba2_cadastro_movimentacao_matheus_views",
+    "RelatedEntityName": "Cadastro_Movimentacao_Matheus",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "397cc919-e6d7-4414-aea6-f0183036e3b4": "Cadastro_Movimentacao_Matheus Inativos(as)",
+      "3be6622e-ef5c-41c3-ac70-b94ab5397bb0": "Exibição de Localização Avançada de Cadastro_Movimentacao_Matheus",
+      "7de182c5-0f10-4efa-8ae8-37f479750647": "Cadastro_Movimentacao_Matheus Ativos(as)",
+      "b7d752ff-7812-427b-b159-d4f9b20beab5": "Exibição de Consulta de Cadastro_Movimentacao_Matheus",
+      "c2703e92-d1ef-4f9d-8cbe-b394aa43a98c": "Exibição Associada de Cadastro_Movimentacao_Matheus"
+    }
+  },
+  {
+    "DisplayName": "Entrada/Saida (Cadastro_Movimentacao_Matheus)",
+    "Name": "crba2_cadastro_movimentacao_matheus_crba2_entradasaida",
+    "OptionSetInfoNameMapping": {
+      "0": "Saida",
+      "1": "Entrada"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "crba2_entradasaida",
+        "OptionSetReferenceEntityName": "Cadastro_Movimentacao_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "crba2_entradasaida",
+    "RelatedEntityName": "Cadastro_Movimentacao_Matheus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Cadastro_Movimentacao_Matheus)",
+    "Name": "crba2_cadastro_movimentacao_matheus_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo(a)",
+      "1": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Cadastro_Movimentacao_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Cadastro_Movimentacao_Matheus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Status (Cadastro_Movimentacao_Matheus)",
+    "Name": "crba2_cadastro_movimentacao_matheus_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo(a)",
+      "2": "Inativo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Cadastro_Movimentacao_Matheus"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Cadastro_Movimentacao_Matheus",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,369 @@
+Relatorio As screen:
+    BackgroundImage: =
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Height: =56
+        Size: =21
+        Text: |-
+            ="Total de Itens no Armazem limite: 600" 
+        Width: =431
+        X: =129
+        Y: =236
+        ZIndex: =21
+
+    Button7_4 As button:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Fill: =RGBA(54, 176, 75, 1)
+        Font: =Font.Arial
+        Height: =59
+        HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+        OnSelect: =Set(VarMostraPopup, true);
+        Size: =20
+        Text: ="Grafico de pizza"
+        Width: =247
+        X: =815
+        Y: =576
+        ZIndex: =22
+
+    Label1_1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =21
+        Text: |-
+            ="Total de Itens no Armazem: "&Sum(Card_Prod_Matheus,Saldo) 
+        Width: =452
+        X: =129
+        Y: =321
+        ZIndex: =23
+
+    Label1_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Height: =61
+        Size: =21
+        Text: |-
+            ="Total de Itens no Armazem: "&(Sum(Card_Prod_Matheus,Saldo)/600)*100&"% de ocupação"
+        Width: =452
+        X: =129
+        Y: =422
+        ZIndex: =24
+
+    CompositeColumnChart1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Title1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            Size: =21
+            Text: ="Gráfico de coluna para Categorias"
+            Width: =684
+            X: =581
+            Y: =60
+            ZIndex: =19
+
+        ColumnChart1 As barChart:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            Height: =452
+            Items: =Card_Prod_Matheus
+            Size: =21
+            Width: =684
+            X: =613
+            Y: =101
+            ZIndex: =20
+
+    Menu_3 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =27
+
+        Rectangle1_3 As rectangle:
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =86
+            Width: =1366
+            Y: =682
+            ZIndex: =7
+
+        Button1_13 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =41
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Home)
+            PaddingLeft: =20
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Home"
+            Width: =174
+            X: =20
+            Y: =708
+            ZIndex: =8
+
+        Button1_14 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Produto)
+            PaddingLeft: =50
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(152, 208, 70, 100)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =21
+            Text: ="Cadastra Prd"
+            Width: =262
+            X: =207
+            Y: =706
+            ZIndex: =9
+
+        Button1_15 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Movimentacao)
+            PaddingLeft: =50
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Cadastra Mov"
+            Width: =262
+            X: =491
+            Y: =706
+            ZIndex: =10
+
+        Button1_16 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Relatorio)
+            PaddingLeft: =40
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Relatório"
+            Width: =208
+            X: =780
+            Y: =706
+            ZIndex: =11
+
+        Image1_27 As image:
+            Height: =40
+            Image: =produtos
+            Width: =40
+            X: =217
+            Y: =706
+            ZIndex: =12
+
+        Image1_28 As image:
+            Height: =40
+            Image: ='movimentacao-de-carga'
+            Width: =40
+            X: =494
+            Y: =709
+            ZIndex: =13
+
+        Image1_16 As image:
+            Height: =40
+            Image: =relatorio
+            Width: =40
+            X: =780
+            Y: =709
+            ZIndex: =14
+
+        Button1_24 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =42
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Login)
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Sair"
+            Width: =145
+            X: =1217
+            Y: =709
+            ZIndex: =15
+
+        Label7_3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Size: =21
+            Text: ="@usuário"
+            X: =1071
+            Y: =706
+            ZIndex: =16
+
+        Image1_15 As image:
+            Height: =40
+            Image: ='equipe-medica'
+            Width: =40
+            X: =20
+            Y: =706
+            ZIndex: =17
+
+        Image1_17 As image:
+            Height: =40
+            Image: =profile
+            Width: =40
+            X: =1020
+            Y: =709
+            ZIndex: =18
+
+    GraficoPizza As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =29
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =682
+            Visible: =VarMostraPopup
+            Width: =1366
+            ZIndex: =25
+
+        Button7_6 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Fill: =RGBA(54, 176, 75, 1)
+            Font: =Font.Arial
+            Height: =75
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            OnSelect: =Set(VarMostraPopup, false);
+            Size: =20
+            Text: ="Voltar"
+            Visible: =VarMostraPopup
+            Width: =247
+            X: =943
+            Y: =345
+            ZIndex: =26
+
+        Title4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =25
+            Size: =21
+            Text: ="Gráfico de pizza para categorias"
+            Visible: =VarMostraPopup
+            Width: =700
+            X: =88
+            Y: =79
+            ZIndex: =27
+
+        PieChart2 As pieChart:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            Items: =Card_Prod_Matheus
+            Size: =20
+            Visible: =VarMostraPopup
+            Width: =700
+            X: =117
+            Y: =129
+            ZIndex: =28
+
+        Legend3 As legend:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            Height: =200
+            ItemColorSet: =PieChart2.ItemColorSet
+            Items: =PieChart2.SeriesLabels
+            Size: =20
+            Visible: =VarMostraPopup
+            Width: =700
+            X: =120
+            Y: =520
+            ZIndex: =29
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =32
+
+        Image1_32 As image:
+            Height: =50
+            Image: =warehouse
+            Width: =50
+            X: =60
+            Y: =243
+            ZIndex: =1
+
+        Image1_33 As image:
+            Height: =50
+            Image: =warehouse
+            Width: =50
+            X: =60
+            Y: =326
+            ZIndex: =2
+
+        Image1_34 As image:
+            Height: =50
+            Image: =warehouse
+            Width: =50
+            X: =60
+            Y: =427
+            ZIndex: =3
+
+    Group12_1 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =35
+
+        Image1_6 As image:
+            Height: =40
+            Image: =relatorio
+            Width: =40
+            X: =167
+            Y: =50
+            ZIndex: =4
+
+        Label6_5 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =64
+            Size: =21
+            Text: ="Relatórios"
+            Width: =536
+            X: =223
+            Y: =40
+            ZIndex: =5
+
+        Icon2_5 As icon.ChevronLeft:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =24
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(Home)
+            Width: =30
+            X: =117
+            Y: =60
+            ZIndex: =6
+

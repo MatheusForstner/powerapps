@@ -1,0 +1,250 @@
+Home As screen:
+    BackgroundImage: =
+    Fill: =RGBA(0, 0, 0, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    Menu_1 As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =30
+
+        Rectangle1_4 As rectangle:
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =86
+            Width: =1366
+            Y: =682
+            ZIndex: =18
+
+        Button1_18 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =41
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Home)
+            PaddingLeft: =20
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Home"
+            Width: =174
+            X: =20
+            Y: =708
+            ZIndex: =19
+
+        Button1_19 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Produto)
+            PaddingLeft: =50
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(152, 208, 70, 100)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =21
+            Text: ="Cadastra Prd"
+            Width: =262
+            X: =207
+            Y: =706
+            ZIndex: =20
+
+        Button1_20 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Cadastro_Movimentacao)
+            PaddingLeft: =50
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Cadastra Mov"
+            Width: =262
+            X: =491
+            Y: =706
+            ZIndex: =21
+
+        Button1_21 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =45
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Relatorio)
+            PaddingLeft: =40
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Relatório"
+            Width: =208
+            X: =780
+            Y: =706
+            ZIndex: =22
+
+        Image1_21 As image:
+            Height: =40
+            Image: =produtos
+            Width: =40
+            X: =217
+            Y: =706
+            ZIndex: =23
+
+        Image1_22 As image:
+            Height: =40
+            Image: ='movimentacao-de-carga'
+            Width: =40
+            X: =494
+            Y: =709
+            ZIndex: =24
+
+        Image1_23 As image:
+            Height: =40
+            Image: =relatorio
+            Width: =40
+            X: =780
+            Y: =709
+            ZIndex: =25
+
+        Button1_22 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =42
+            HoverFill: =ColorFade(RGBA(152, 208, 70, 100), -20%)
+            OnSelect: =Navigate(Login)
+            PressedColor: =RGBA(152, 208, 70, 1)
+            PressedFill: =RGBA(0,0,0,0)
+            Size: =21
+            Text: ="Sair"
+            Width: =145
+            X: =1207
+            Y: =709
+            ZIndex: =26
+
+        Label7_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Size: =21
+            Text: ="@usuário"
+            X: =1071
+            Y: =706
+            ZIndex: =27
+
+        Image1_20 As image:
+            Height: =40
+            Image: ='equipe-medica'
+            Width: =40
+            X: =20
+            Y: =706
+            ZIndex: =28
+
+        Image1_24 As image:
+            Height: =40
+            Image: =profile
+            Width: =40
+            X: =1020
+            Y: =709
+            ZIndex: =29
+
+    Group10 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =33
+
+        Image9 As image:
+            Height: =684
+            Image: =pets99
+            Width: =831
+            X: =534
+            ZIndex: =1
+
+        Button2 As button:
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(54, 176, 75, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =67
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            Size: =18
+            Text: ="NOSSOS SERVIÇOS"
+            Width: =237
+            X: =83
+            Y: =440
+            ZIndex: =10
+
+        Button2_1 As button:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =67
+            HoverFill: =ColorFade(RGBA(0, 0, 0, 100), -20%)
+            Size: =18
+            Text: ="ENVIE SUA MENSAGEM"
+            Width: =307
+            X: =335
+            Y: =440
+            ZIndex: =11
+
+        Label4 As label:
+            Color: =RGBA(54, 176, 75, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            Size: =28
+            Text: ="Dr. CuidaAnimais"
+            Width: =347
+            X: =83
+            Y: =159
+            ZIndex: =12
+
+        Label4_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =280
+            Size: =21
+            Text: ="Médicos veterinários de confiança e procedimentos desenvolvidos com carinho visando o bem-estar do seu bichinho, feito através de um atendimento domiciliar."
+            Width: =537
+            X: =83
+            Y: =175
+            ZIndex: =13
+
+        Image1_7 As image:
+            Height: =91
+            Image: ='Logo Petshop marrom ilustrado'
+            Width: =88
+            X: =96
+            Y: =44
+            ZIndex: =17
+
+    Group9 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =33
+
+        Image1_29 As image:
+            Height: =60
+            Image: =instagram
+            Width: =60
+            X: =1259
+            Y: =30
+            ZIndex: =30
+
+        Image1_30 As image:
+            Height: =60
+            Image: =facebook
+            Width: =60
+            X: =1259
+            Y: =100
+            ZIndex: =31
+
+        Image1_31 As image:
+            Height: =60
+            Image: ='twitter (1)'
+            Width: =60
+            X: =1259
+            Y: =170
+            ZIndex: =32
+
