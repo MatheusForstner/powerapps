@@ -14,32 +14,20 @@
 <img src="https://i.ibb.co/Ksc45fs/veteriano11.png" alt="veteriano11" width="1157" height="642" data-is360="0" data-load="full" class="" style="width: 950px; height: 527.139px; cursor: zoom-in; display: block;" data-zoom="zoom-class1">
 </div>
 
-# Funcionário
+# Cadastra Produto
 
 <div align="center"> 
-<a href="https://ibb.co/C2LKLr1"><img src="https://i.ibb.co/zJdVdkn/image.png" alt="image" border="0"></a>
+<img src="https://i.ibb.co/bRqWfzk/veteriano12.png" alt="veteriano12" width="1155" height="646" data-is360="0" data-load="full" class="cursor-zoom-in" style="width: 950px; height: 531.342px; cursor: zoom-in; display: block;" data-zoom="zoom-class1">
 </div>
 
-# Departamento
+# Cadastra Movimentação
 
 <div align="center"> 
-<a href="https://ibb.co/FW3F5zm"><img src="https://i.ibb.co/g79xSJm/image.png" alt="image" border="0"></a>
+<img src="https://i.ibb.co/K9s6Km9/veteriano15.png" alt="veteriano15" width="1161" height="647" data-is360="0" data-load="full" class="cursor-zoom-in" style="width: 950px; height: 529.414px; cursor: zoom-in; display: block;" data-zoom="zoom-class1">
 </div>
 
-# Office
+# Relatorio
 
 <div align="center"> 
-<a href="https://ibb.co/k459J33"><img src="https://i.ibb.co/BycrG44/image.png" alt="image" border="0"></a>
-</div>
-
-# Salário
-
-<div align="center"> 
-<a href="https://ibb.co/7QrbRT6"><img src="https://i.ibb.co/XDFV3dv/image.png" alt="image" border="0"></a>
-</div>
-
-# Benéficios
-
-<div align="center"> 
-<a href="https://ibb.co/t3YDnMd"><img src="https://i.ibb.co/mSh4dCx/image.png" alt="image" border="0"></a>
+<img src="https://i.ibb.co/87z6cnQ/veteriano16.png" alt="veteriano16" width="1157" height="640" data-is360="0" data-load="full" class="" style="width: 950px; height: 525.497px; cursor: zoom-in; display: block;" data-zoom="zoom-class1">
 </div>
